@@ -352,6 +352,10 @@
         .tech-icon {
             filter: drop-shadow(0 0 5px rgba(106, 17, 203, 0.5));
         }
+        /* 新增卡片指针样式 */
+        .card-clickable {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="text-gray-800 dark:text-gray-200 min-h-screen">
@@ -495,6 +499,26 @@
                     <div class="h-64">
                         <canvas id="activityChart"></canvas>
                     </div>
+                </div>
+
+                <!-- 新增：博客直达卡片 -->
+                <div class="glass-panel bg-white/30 dark:bg-gray-800/30 rounded-2xl shadow-xl p-6 mt-6 card-hover animate-fade-in card-clickable" style="animation-delay: 0.3s;" onclick="openBlog()">
+                    <h3 class="text-lg font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-blog text-primary dark:text-primary-dark mr-2"></i>
+                        博客直达
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">点击卡片访问我的博客</p>
+                    <div class="text-primary dark:text-primary-dark font-medium break-words">https://blog.nws.us.kg</div>
+                </div>
+
+                <!-- 新增：Minecraft 服务器卡片（点击复制地址） -->
+                <div class="glass-panel bg-white/30 dark:bg-gray-800/30 rounded-2xl shadow-xl p-6 mt-6 card-hover animate-fade-in card-clickable" style="animation-delay: 0.4s;" onclick="copyServer()">
+                    <h3 class="text-lg font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-cube text-primary dark:text-primary-dark mr-2"></i>
+                        Minecraft 服务器
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">点击复制服务器地址</p>
+                    <div class="text-primary dark:text-primary-dark font-medium">mc.nws.us.kg</div>
                 </div>
             </div>
 
@@ -783,6 +807,21 @@
                 observer.observe(card);
             });
         });
+
+        // 新增：打开博客的函数
+        function openBlog() {
+            window.open('https://blog.nws.us.kg', '_blank');
+        }
+
+        // 新增：复制服务器地址的函数
+        function copyServer() {
+            const address = 'mc.nws.us.kg';
+            navigator.clipboard.writeText(address).then(() => {
+                alert('服务器地址已复制到剪贴板');
+            }).catch(() => {
+                alert('复制失败，请手动复制');
+            });
+        }
     </script>
 </body>
 </html>
