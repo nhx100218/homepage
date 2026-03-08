@@ -1,0 +1,27 @@
+{
+  "github_url": "https://github.com/nhx100218",
+  "dark_mode": "auto",
+  "name": "nhx#9605",
+  "bio": "nWs 现任会长",
+  "introduction_file": "Introduction.md",
+  "theme": {
+    "primary_color": "#0f6f6b",
+    "secondary_color": "#2aa39a",
+    "dark_primary_color": "#1f8f8a",
+    "dark_secondary_color": "#4fc0b6"
+  },
+  "background": {
+    "image": "background.jpg",
+    "blur": 7,
+    "overlay_opacity": 0.55,
+    "overlay_color": "#e6f4f3",
+    "dark_overlay_color": "#0f1f1e"
+  },
+  "contact": {
+    "qq": "",
+    "wechat": "",
+    "bilibili": "https://space.bilibili.com/1807209236",
+    "douyin": "",
+    "xiaohongshu": ""
+  }
+}
